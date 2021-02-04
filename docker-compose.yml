@@ -159,26 +159,6 @@ services:
       - ./docker-volumes/oaipmh-cache:/app/oaipmh-cache
       - static_schedule:/static_schedule
 
-  https:
-    container_name: ${COMPOSE_PROJECT_NAME-rsd}-https
-    depends_on:
-      - reverse-proxy
-    environment:
-      SSL_DOMAINS: ${SSL_DOMAINS:?Required variable SSL_DOMAINS not set or empty. Perhaps you forgot to define it in '.env'?}
-    build:
-      context: ./https
-    logging:
-      driver: "json-file"
-      options:
-        max-file: "2"
-        max-size: "40m"
-    ports:
-      - 443:443
-      - 80:80
-    restart: unless-stopped
-    volumes:
-      - caddy_data:/data
-      - caddy_config:/config
 
   reverse-proxy:
     build:
@@ -202,11 +182,13 @@ services:
       - static_frontend:/static_frontend:ro
       - static_graphs:/static_graphs:ro
       - static_schedule:/static_schedule:ro
+    ports:
+      - 443:443
+      - 80:80
 
 volumes:
   static_admin:
   static_frontend:
   static_graphs:
   static_schedule:
-  caddy_data:
-  caddy_config:
+

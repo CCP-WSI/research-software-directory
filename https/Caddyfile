@@ -1,3 +1,0 @@
-{$SSL_DOMAINS}
-
-reverse_proxy http://reverse-proxy:80
