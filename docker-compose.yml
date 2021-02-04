@@ -112,6 +112,7 @@ services:
     volumes:
       - static_frontend:/shared_static
       - ./docker-volumes/oaipmh-cache:/static/oaipmh-cache
+      - ./frontend:/src
 
   graphs:
     build:
