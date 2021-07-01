@@ -247,11 +247,6 @@ def remove_future_mentions(mentions):
     return past_mentions
 
 
-@application.route('/about')
-def about_template():
-    return htmlmin.minify(flask.render_template('about/template.html'))
-
-
 @application.errorhandler(404)
 def page_not_found(e):
     return flask.render_template('404/template.html',e=e,url=request.path)
