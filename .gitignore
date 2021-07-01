@@ -23,6 +23,7 @@
 /frontend/.idea
 /frontend/.pytest_cache/
 /frontend/app/__pycache__/
+/frontend/__pycache__/
 /frontend/app/*.py[cod]
 /frontend/tests/__pycache__/
 /frontend/tests/*.py[cod]
@@ -34,6 +35,8 @@
 
 /harvesting/__pycache__/
 /harvesting/oaipmh-cache/
+
+/reverse-proxy/software*
 
 /rsd-secrets*.env
 /.env
