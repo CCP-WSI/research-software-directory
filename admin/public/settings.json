@@ -2,6 +2,176 @@
   "backendUrl": "/api",
   "authUrl": "/auth",
   "resources": {
+    "solver": {
+      "name": "Solver",
+      "label": "Solver",
+      "itemLabelTemplate": "{{ solverName }}",
+      "icon": "file code outline",
+      "properties": {
+        "solverName": {
+          "label": "Solver name",
+          "sortIndex": 2
+        },
+        "codeBase": {
+          "label": "Code Base",
+          "sortIndex": 3,
+	  "help": 
+            "<p>For example, OpenFOAM</p>"
+        },
+        "parentSolver": {
+          "label": "Parent Solver",
+          "sortIndex": 4,
+          "help":
+            "<p>Quite often solvers are modified versions of another solver (the parent solver)</p>"
+        },
+        "bullets": {
+          "label": "Bullet list",
+          "sortIndex": 100,
+          "multiline": true,
+          "help":
+            "<p><b>Answer the following questions</b> (in Markdown with bullet points (*)):</p><ul><li>What does your software provide for what user?</li><li>What does your software do?</li><li>What makes your software unique?</li><li>List some highlights/awards:</li></ul></p>"
+        },
+        "contributingOrganizations": {
+          "label": "Contributing organizations",
+          "sortIndex": 400
+        },
+        "contributors": {
+          "label": "Contributors",
+          "sortIndex": 600,
+          "properties": {
+            "foreignKey": { "label": "Person" },
+            "isContactPerson": {
+              "label": "Is this person the contact person?"
+            },
+            "affiliations": {
+              "properties": {
+                "foreignKey": {
+                  "label": "Organization"
+                }
+              }
+            }
+          }
+        },
+        "conceptDOI": {
+          "label": "Concept DOI",
+          "sortIndex": 500,
+          "help":
+            "The <a href=\"https://help.zenodo.org/#versioning\">Zenodo concept DOI</a>. Not a URL"
+        },
+        "createdAt": {
+          "label": "Created at",
+          "sortIndex": 1000,
+          "readonly": true
+        },
+        "createdBy": {
+          "label": "Created by",
+          "sortIndex": 1010,
+          "readonly": true
+        },
+        "getStartedURL": {
+          "label": "Getting started URL",
+          "sortIndex": 510
+        },
+        "isPublished": {
+          "sortIndex": 10,
+          "label": "Is published"
+        },
+        "license": {
+          "sortIndex": 550,
+          "label": "License(s)"
+        },
+        "primaryKey": {
+          "sortIndex": 0,
+          "readonly": true
+        },
+        "programmingLanguage": {
+          "sortIndex": 560,
+          "label": "Programming language(s)"
+        },
+        "readMore": {
+          "label": "Read more",
+          "sortIndex": 300,
+          "multiline": true,
+          "help": "Text shown when Read more button is pressed"
+        },
+        "related": {
+          "sortIndex": 650,
+          "label": "Related",
+          "properties": {
+            "mentions": {
+              "properties": {
+                "foreignKey": {
+                  "label": " "
+                }
+              }
+            },
+            "organizations": {
+              "properties": {
+                "foreignKey": {
+                  "label": " "
+                }
+              }
+            },
+            "projects": {
+              "properties": {
+                "foreignKey": {
+                  "label": " "
+                }
+              }
+            },
+            "software": {
+              "properties": {
+                "foreignKey": {
+                  "label": " "
+                }
+              }
+            }
+          }
+        },
+        "repositoryURLs": {
+          "sortIndex": 580,
+          "label": "Code repository URLs"
+        },
+        "shortStatement": {
+          "label": "Short statement",
+          "multiline": true,
+          "sortIndex": 50,
+          "help":
+            "<p>Short <b>software statement</b>: in max. 30 words explain when your software might be useful and what it solves.</p>"
+        },
+        "slug": {
+          "help": "How this software can be identified in the URL: /software/&lt;slug&gt;",
+          "sortIndex": 1
+        },
+        "tags": {
+          "label": "tags",
+          "sortIndex": 800
+        },
+        "testimonials": {
+          "sortIndex": 680,
+          "label": "Testimonials",
+          "properties": {
+            "person": {
+              "properties": {
+                "foreignKey": {
+                  "label": "Person"
+                }
+              }
+            }
+          }
+        },
+        "updatedAt": {
+          "label": "Updated at",
+          "sortIndex": 1020,
+          "readonly": true
+        },
+        "updatedBy": {
+          "label": "Updated by",
+          "sortIndex": 1030,
+          "readonly": true
+        }
+      }
+    },
     "software": {
       "name": "Software",
       "label": "Software",

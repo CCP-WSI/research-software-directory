@@ -107,6 +107,25 @@
             ],
             "type": "object"
         },
+        "solver": {
+            "additionalProperties": false,
+            "properties": {
+                "collection": {
+                    "enum": [
+                        "solver"
+                    ],
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "collection",
+                "id"
+            ],
+            "type": "object"
+        },
         "release": {
             "additionalProperties": false,
             "properties": {
