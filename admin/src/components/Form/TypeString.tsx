@@ -50,12 +50,6 @@ export default class TypeString extends React.Component<
               this.props.validationErrors.length > 0
             }
           />
-          {this.props.validationErrors &&
-            this.props.validationErrors.map((error, i) => (
-              <div key={i}>
-                <span style={{ color: "red" }}>{error.message}</span>
-              </div>
-            ))}
         </div>
       </Horizontal>
     );
