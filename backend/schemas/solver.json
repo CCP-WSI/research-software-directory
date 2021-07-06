@@ -269,7 +269,7 @@
         }
     },
     "required": [
-        "brandName",
+        "solverName",
         "bullets",
         "conceptDOI",
         "contributors",

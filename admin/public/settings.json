@@ -137,10 +137,10 @@
           "multiline": true,
           "sortIndex": 50,
           "help":
-            "<p>Short <b>software statement</b>: in max. 30 words explain when your software might be useful and what it solves.</p>"
+            "<p>Short description (max 30 words) of your solver. Will appear underneath the solver name</p>"
         },
         "slug": {
-          "help": "How this software can be identified in the URL: /software/&lt;slug&gt;",
+          "help": "How this software can be identified in the URL: /solver/&lt;slug&gt;",
           "sortIndex": 1
         },
         "tags": {
