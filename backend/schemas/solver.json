@@ -114,6 +114,19 @@
             "type": "array",
             "uniqueItems": true
         },
+        "codeAccess": {
+            "items": {
+                "enum": [
+                    "Open-source",
+                    "Commercial",
+                    "In-house"
+                ],
+                "type": "string"
+            },
+            "minItems": 1,
+            "type": "array",
+            "uniqueItems": true
+        },
         "readMore": {
             "minLength": 200,
             "type": "string"

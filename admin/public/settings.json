@@ -72,6 +72,10 @@
           "label": "Getting started URL",
           "sortIndex": 510
         },
+        "codeAccess": {
+          "sortIndex": 520,
+          "label": "Code Access"
+        },
         "isPublished": {
           "sortIndex": 10,
           "label": "Is published"
