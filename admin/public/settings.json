@@ -5,10 +5,10 @@
     "solver": {
       "name": "Solver",
       "label": "Solver",
-      "itemLabelTemplate": "{{ solverName }}",
+      "itemLabelTemplate": "{{ brandName }}",
       "icon": "file code outline",
       "properties": {
-        "solverName": {
+        "brandName": {
           "label": "Solver name",
           "sortIndex": 2
         },
