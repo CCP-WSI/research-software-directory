@@ -115,3 +115,8 @@ For more details on how to use the MongoDB shell, please refer to the documentat
 Go to any software package in the admin interface and verify that the errors
 which were there previously have now gone.
 
+## Frontend
+
+Note, if you want the property you've added to the schema showing on the software page then go to `frontend/templates/software` and edit which ever html file is relevant for the part of the page where you want to add your new piece of metadata. Refer to the [general workflow when making
+changes](/README.md#general-workflow-when-making-changes) to update the Docker
+container with the new content.
