@@ -1,7 +1,7 @@
 {% extends "layout_template.html" %}
 {%- block head -%}
     {{super()}}
-    <title>{{template_data.brandName}} | Research Software Directory</title>
+    <title>{{template_data.brandName}} | CCP-WSI Software Catalogue</title>
     <meta name="citation_title" content="{{template_data.brandName}}" />
     <meta name="citation_author" content="{{", ".join(template_data.contributor | list_names_filter)}}" />
     <meta name="citation_publication_date" content="{{template_data.createdAt | date_filter }}" />
