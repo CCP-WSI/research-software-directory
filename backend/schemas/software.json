@@ -17,6 +17,11 @@
             "minLength": 1,
             "type": "string"
         },
+        "parentCodeBase": {
+            "maxLength": 50,
+            "minLength": 1,
+            "type": "string"
+        },
         "bullets": {
             "maxLength": 5000,
             "minLength": 20,
@@ -73,6 +78,10 @@
             "format": "uri",
             "type": "string"
         },
+        "userGuide": {
+            "format": "uri",
+            "type": "string"
+        },
         "isPublished": {
             "default": false,
             "type": "boolean"
@@ -123,7 +132,6 @@
                 ],
                 "type": "string"
             },
-            "minItems": 1,
             "type": "array",
             "uniqueItems": true
         },
@@ -279,6 +287,78 @@
         },
         "updatedBy": {
             "type": "string"
+        },
+        "GoverningEquations": {
+            "items": {
+                "enum": [
+                    "Navier-Stokes",
+                    "Linear Potential Flow Theory",
+		    "Second-order Potential Flow Theory",
+		    "Fully Nonlinear Potential Flow Theory",
+		    "Shallow Water",
+		    "Structural codes solver eqns to come"                    
+                ],
+                "type": "string"
+            },
+            "maxItems": 1,
+            "type": "array"
+        },
+	"SteadyUnsteady": {
+            "items": {
+                "enum": [
+                    "Steady",
+                    "Unsteady"
+                ],
+                "type": "string"
+            },
+            "maxItems": 1,
+            "type": "array"
+        },
+	"SpatialDiscretisationScheme": {
+            "items": {
+                "enum": [
+                    "Finite Volume Method (FVM)",
+                    "Finite Difference Method (FDM)",
+	            "Finite Element Method (FEM)"
+                ],
+                "type": "string"
+            },
+            "maxItems": 1,
+            "type": "array"
+        },
+	"GridSystem": {
+            "items": {
+                "enum": [
+                    "Structured",
+                    "Unstructured"
+                ],
+                "type": "string"
+            },
+            "type": "array",
+            "maxItems": 1
+        },
+	"FluidDensityDefinition": {
+            "items": {
+                "enum": [
+                    "Compressible",
+                    "Incompressible"
+                ],
+                "type": "string"
+            },
+            "maxItems": 1,
+            "type": "array"
+        },
+	"PressureVelocityCoupling": {
+            "items": {
+                "enum": [
+                    "SIMPLE",
+                    "PISO",
+	            "PIMPLE" 
+                ],
+                "type": "string"
+            },
+            "type": "array",
+            "uniqueItems": true
         }
     },
     "required": [

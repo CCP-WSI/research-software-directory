@@ -24,9 +24,47 @@
           "help":
             "<p>Quite often solvers are modified versions of another solver (the parent solver)</p>"
         },
+        "parentCodeBase": {
+          "label": "Parent Code Base",
+          "sortIndex": 5
+        },
+        "getStartedURL": {
+          "label": "URL of solver ",
+          "sortIndex": 6
+        },
+        "userGuide": {
+          "label": "User Guide/Manual",
+          "sortIndex": 7
+        },
+        "GoverningEquations": {
+          "sortIndex": 100,
+          "label": "Governing Equations"
+        },
+        "SteadyUnsteady": {
+          "sortIndex": 101,
+          "label": "Steady or Unsteady",
+	  "help":
+            "<p>Typically, solvers can be either steady, i.e. there is one fixed solution or unsteady, i.e. the solution is a function of time.</p>"
+        },
+	"SpatialDiscretisationScheme": {
+          "sortIndex": 102,
+          "label": "Spatial Discretisation Scheme"
+        },
+        "GridSystem": {
+          "sortIndex": 103,
+          "label": "Grid System"
+        },
+        "FluidDensityDefinition": {
+          "sortIndex": 104,
+          "label": "Fluid density definition"
+        },
+        "PressureVelocityCoupling": {
+          "sortIndex": 105,
+          "label": "Pressure-velocity coupling"
+        },
         "bullets": {
           "label": "Bullet list",
-          "sortIndex": 100,
+          "sortIndex": 150,
           "multiline": true,
           "help":
             "<p><b>Answer the following questions</b> (in Markdown with bullet points (*)):</p><ul><li>What does your software provide for what user?</li><li>What does your software do?</li><li>What makes your software unique?</li><li>List some highlights/awards:</li></ul></p>"
@@ -67,10 +105,6 @@
           "label": "Created by",
           "sortIndex": 1010,
           "readonly": true
-        },
-        "getStartedURL": {
-          "label": "Getting started URL",
-          "sortIndex": 510
         },
         "codeAccess": {
           "sortIndex": 520,
