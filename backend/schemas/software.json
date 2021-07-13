@@ -22,11 +22,6 @@
             "minLength": 1,
             "type": "string"
         },
-        "bullets": {
-            "maxLength": 5000,
-            "minLength": 20,
-            "type": "string"
-        },
         "conceptDOI": {
             "pattern": "^10\\.\\d{4,9}\/[\\-._;()/:a-zA-Z0-9]+$",
             "type": "string"
@@ -108,21 +103,6 @@
         "primaryKey": {
             "$ref": "definitions.json/key/software"
         },
-        "programmingLanguage": {
-            "items": {
-                "enum": [
-                    "C++",
-                    "Fortran",
-                    "Java",
-                    "JavaScript",
-                    "Python"
-                ],
-                "type": "string"
-            },
-            "minItems": 1,
-            "type": "array",
-            "uniqueItems": true
-        },
         "codeAccess": {
             "items": {
                 "enum": [
@@ -134,10 +114,6 @@
             },
             "type": "array",
             "uniqueItems": true
-        },
-        "readMore": {
-            "minLength": 200,
-            "type": "string"
         },
         "related": {
             "additionalProperties": false,
@@ -217,68 +193,11 @@
             },
             "type": "object"
         },
-        "shortStatement": {
-            "maxLength": 300,
-            "minLength": 10,
-            "pattern": "^[a-zA-Z0-9,.;:\\-_ '’+]+$",
-            "type": "string"
-        },
         "slug": {
             "maxLength": 100,
             "minLength": 1,
             "pattern": "^[a-z0-9-]+$",
             "type": "string"
-        },
-        "tags": {
-            "items": {
-                "enum": [
-                    "Big data",
-                    "GPU",
-                    "High performance computing",
-                    "Image processing",
-                    "Inter-operability & linked data",
-                    "Machine learning",
-                    "Multi-scale & multi model simulations",
-                    "Optimized data handling",
-                    "Real time data analysis",
-                    "Text analysis & natural language processing",
-                    "Visualization",
-                    "Workflow technologies"
-                ],
-                "type": "string"
-            },
-            "type": "array",
-            "uniqueItems": true
-        },
-        "testimonials": {
-            "items": {
-                "additionalProperties": false,
-                "properties": {
-                    "affiliation": {
-                        "maxLength": 100,
-                        "minLength": 1,
-                        "type": "string"
-                    },
-                    "person": {
-                        "maxLength": 100,
-                        "minLength": 1,
-                        "type": "string"
-                    },
-                    "text": {
-                        "maxLength": 500,
-                        "minLength": 10,
-                        "pattern": "^[a-zA-Z0-9 !@#$%-_+=;:,\\.?'’]+$",
-                        "type": "string"
-                    }
-                },
-                "required": [
-                    "person",
-                    "text"
-                ],
-                "type": "object"
-            },
-            "type": "array",
-            "uniqueItems": true
         },
         "updatedAt": {
             "format": "date-time",
@@ -363,7 +282,6 @@
     },
     "required": [
         "brandName",
-        "bullets",
         "conceptDOI",
         "contributors",
         "createdAt",
@@ -372,12 +290,8 @@
         "isPublished",
         "license",
         "primaryKey",
-        "programmingLanguage",
         "related",
-        "shortStatement",
         "slug",
-        "tags",
-        "testimonials",
         "updatedAt"
     ],
     "title": "Software schema"

@@ -62,13 +62,6 @@
           "sortIndex": 105,
           "label": "Pressure-velocity coupling"
         },
-        "bullets": {
-          "label": "Bullet list",
-          "sortIndex": 150,
-          "multiline": true,
-          "help":
-            "<p><b>Answer the following questions</b> (in Markdown with bullet points (*)):</p><ul><li>What does your software provide for what user?</li><li>What does your software do?</li><li>What makes your software unique?</li><li>List some highlights/awards:</li></ul></p>"
-        },
         "contributingOrganizations": {
           "label": "Contributing organizations",
           "sortIndex": 400
@@ -122,16 +115,6 @@
           "sortIndex": 0,
           "readonly": true
         },
-        "programmingLanguage": {
-          "sortIndex": 560,
-          "label": "Programming language(s)"
-        },
-        "readMore": {
-          "label": "Read more",
-          "sortIndex": 300,
-          "multiline": true,
-          "help": "Text shown when Read more button is pressed"
-        },
         "related": {
           "sortIndex": 650,
           "label": "Related",
@@ -170,33 +153,9 @@
           "sortIndex": 580,
           "label": "Code repository URLs"
         },
-        "shortStatement": {
-          "label": "Short statement",
-          "multiline": true,
-          "sortIndex": 50,
-          "help":
-            "<p>Short description (max 30 words) of your solver. Will appear underneath the solver name</p>"
-        },
         "slug": {
           "help": "How this software can be identified in the URL: /solver/&lt;slug&gt;",
           "sortIndex": 1
-        },
-        "tags": {
-          "label": "tags",
-          "sortIndex": 800
-        },
-        "testimonials": {
-          "sortIndex": 680,
-          "label": "Testimonials",
-          "properties": {
-            "person": {
-              "properties": {
-                "foreignKey": {
-                  "label": "Person"
-                }
-              }
-            }
-          }
         },
         "updatedAt": {
           "label": "Updated at",
