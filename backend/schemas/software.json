@@ -104,16 +104,12 @@
             "$ref": "definitions.json/key/software"
         },
         "codeAccess": {
-            "items": {
-                "enum": [
-                    "Open-source",
-                    "Commercial",
-                    "In-house"
-                ],
-                "type": "string"
-            },
-            "type": "array",
-            "uniqueItems": true
+            "enum": [
+                "Open-source",
+                "Commercial",
+                "In-house"
+            ],
+            "type": "string"
         },
         "related": {
             "additionalProperties": false,
