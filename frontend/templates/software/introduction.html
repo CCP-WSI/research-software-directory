@@ -5,27 +5,7 @@
                 {% if template_data.brandName %}
                 <h1 class="title name">{{template_data.brandName}}</h1>
                 {% endif %}
-            <div class="specifications col-1-4">
-                <h5><svg class="icon"><use xlink:href="{{url_for('static', filename='icons/icons.svg')}}#icon-tag"></use></svg>Code Base</h5>
-                {% if template_data.codeBase %}
-                <ul class="tags">
-                        <li class="bg-light">{{template_data.codeBase}}</li>
-                </ul>
-                {% endif%}
-
-
-                <h5><svg class="icon"><use xlink:href="{{url_for('static', filename='icons/icons.svg')}}#icon-brackets"></use></svg>Parent Solver</h5>
-                <ul class="languages">
-                        <li>{{template_data.parentSolver}}</li>
-                </ul>
-
-                <h5><svg class="icon"><use xlink:href="{{url_for('static', filename='icons/icons.svg')}}#icon-brackets"></use></svg>Parent Solver Code Base</h5>
-                <ul class="languages">
-                        <li>{{template_data.parentCodeBase}}</li>
-                </ul>
-
-            </div> 
-           </div>
+            </div>
 
            <div class="col col-1-4">
                 <div class="highlight-data">
@@ -40,6 +20,30 @@
                         <div class="text">{{ 'contributors' if template_data.contributors | length >1 else 'contributor' }}</div>
                     </div>
                 </div>
+            </div>
+
+
+            <div class="specifications col-1-4">
+                <h5><svg class="icon"><use xlink:href="{{url_for('static', filename='icons/icons.svg')}}#icon-tag"></use></svg>Code Base</h5>
+                {% if template_data.codeBase %}
+                <ul class="tags">
+                        <li class="bg-light">{{template_data.codeBase}}</li>
+                </ul>
+                {% endif%}
+            </div>
+            <div class="specifications col-1-4">
+
+                <h5><svg class="icon"><use xlink:href="{{url_for('static', filename='icons/icons.svg')}}#icon-brackets"></use></svg>Parent Solver</h5>
+                <ul class="languages">
+                        <li>{{template_data.parentSolver}}</li>
+                </ul>
+            </div>
+            <div class="specifications col-1-4">
+
+                <h5><svg class="icon"><use xlink:href="{{url_for('static', filename='icons/icons.svg')}}#icon-brackets"></use></svg>Parent Solver Code Base</h5>
+                <ul class="languages">
+                        <li>{{template_data.parentCodeBase}}</li>
+                </ul>
             </div>
 
         </div>
