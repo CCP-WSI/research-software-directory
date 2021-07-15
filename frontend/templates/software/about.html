@@ -2,10 +2,35 @@
     <div class="container">
         <div class="row">
 
-            {% if template_data.bullets %}
-            <div class="statement col-3-4">
+            <div class="specifications col-3-4">
                 <h2 class="subtitle text-blue">Scientific Metadata for {{template_data.brandName}}</h2>
                 {{template_data.bullets | markdown_filter }}
+
+                <h5><svg class="icon"><use xlink:href="{{url_for('static', filename='icons/icons.svg')}}#icon-equation"></use></svg>Governing Equations</h5>
+                <ul class="tags">
+                    <li>{{template_data.GoverningEquations}}</li>
+                </ul>
+
+                <h5><svg class="icon"><use xlink:href="{{url_for('static', filename='icons/icons.svg')}}#icon-pencil"></use></svg>Steady or Unsteady</h5>
+                {% if template_data.SteadyUnsteady %}
+                <ul class="tags">
+                    <li>{{template_data.SteadyUnsteady}}</li>
+                </ul>
+                {% endif%}
+
+                <h5><svg class="icon"><use xlink:href="{{url_for('static', filename='icons/icons.svg')}}#icon-pencil"></use></svg>Spatial Discretisation Scheme</h5>
+                {% if template_data.SpatialDiscretisationScheme %}
+                <ul class="tags">
+                    <li>{{template_data.SpatialDiscretisationScheme}}</li>
+                </ul>
+                {% endif%}
+
+                <h5><svg class="icon"><use xlink:href="{{url_for('static', filename='icons/icons.svg')}}#icon-pencil"></use></svg>Grid System</h5>
+                {% if template_data.GridSystem %}
+                <ul class="tags">
+                    <li>{{template_data.GridSystem}}</li>
+                </ul>
+                {% endif%}
 
                 {% if template_data.readMore | markdown_filter %}
                 <div class="read-more">
@@ -19,7 +44,6 @@
                 {% endif %}
 
             </div>
-            {% endif %}
 
             <div class="specifications col-1-4">
                 <h2 class="subtitle text-blue">Administrative Metadata for {{template_data.brandName}}</h2>
