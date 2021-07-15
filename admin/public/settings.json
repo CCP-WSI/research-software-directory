@@ -54,13 +54,9 @@
           "sortIndex": 103,
           "label": "Grid System"
         },
-        "FluidDensityDefinition": {
-          "sortIndex": 104,
-          "label": "Fluid density definition"
-        },
-        "PressureVelocityCoupling": {
-          "sortIndex": 105,
-          "label": "Pressure-velocity coupling"
+       "fluidSolvers": {
+          "sortIndex": 450,
+          "label": "Fluid Solvers:"
         },
         "contributingOrganizations": {
           "label": "Contributing organizations",

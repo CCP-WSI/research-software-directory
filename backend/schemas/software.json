@@ -240,25 +240,38 @@
             ],
             "type": "string"
         },
-	"FluidDensityDefinition": {
-            "enum": [
-                "Compressible",
-                "Incompressible"
-            ],
-            "type": "string"
-        },
-	"PressureVelocityCoupling": {
-            "items": {
-                "enum": [
-                    "SIMPLE",
-                    "PISO",
-	            "PIMPLE" 
-                ],
-                "type": "string"
+        "fluidSolvers": {
+            "additionalProperties": false,
+            "properties": {
+                "FluidDensityDefinition": {
+                    "enum": [
+                        "Compressible",
+                        "Incompressible"
+                    ],
+                    "type": "string"
+                },
+                "PressureVelocityCoupling": {
+                    "items": {
+                        "enum": [
+                           "SIMPLE",
+                           "PISO",
+                           "PIMPLE"
+                        ],
+                       "type": "string"
+                    },
+                    "type": "array",
+                    "uniqueItems": true
+                },
+                "FluidDensityDefinition": {
+                    "enum": [
+                        "Compressible",
+                        "Incompressible"
+                    ],
+                    "type": "string"
+                }
             },
-            "type": "array",
-            "uniqueItems": true
-       } 
+            "type": "object"
+        } 
     },
     "required": [
         "brandName",
