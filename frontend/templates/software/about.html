@@ -32,13 +32,28 @@
                 </ul>
                 {% endif%}
 
-                {% if template_data.readMore | markdown_filter %}
+                {% if template_data.fluidSolvers %}
                 <div class="read-more">
-                    <div class="read-more_content" style="height:0;">{{template_data.readMore}}</div>
+                    <div class="read-more_content" style="height:0;">
+                        <h5><svg class="icon"><use xlink:href="{{url_for('static', filename='icons/icons.svg')}}#icon-pencil"></use></svg>Fluid density definition</h5>
+                        <ul class="tags">
+                            <li>{{template_data.fluidSolvers.FluidDensityDefinition}}</li>
+                        </ul>
+
+                        <h5><svg class="icon"><use xlink:href="{{url_for('static', filename='icons/icons.svg')}}#icon-pencil"></use></svg>Pressure-velocity coupling</h5>
+                        {% if template_data.fluidSolvers.PressureVelocityCoupling %}
+                        <ul class="tags">
+                            {% for pvc in template_data.fluidSolvers.PressureVelocityCoupling %}
+                                <li>{{pvc}}</li>
+                            {% endfor %}
+                        </ul>
+                       {% endif%}
+
+                    </div>
 
                     <div class="read-more_button button button--outlined">
                         <span><svg class="icon"><use xlink:href="{{url_for('static', filename='icons/icons.svg')}}#icon-plus"></use></svg></span>
-                        <span class="button_text">Read more</span>
+                        <span class="button_text">Fluid Solvers</span>
                     </div>
                 </div>
                 {% endif %}
