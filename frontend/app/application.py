@@ -38,7 +38,7 @@ def serialize_software_list(swlist):
             'primaryKey': sw.get('primaryKey'),
             'brandName': sw.get('brandName'),
             'shortStatement': sw.get('shortStatement'),
-            'isFeatured': sw.get('isFeatured'),
+            'isFeatured': sw.get('isPublished'),
             'relatedOrganizations': [
                 { 'foreignKey': { key: org['foreignKey'][key] for key in ['primaryKey', 'name'] } } for org in sw.get('related').get('organizations')],
             'slug': sw.get('slug'),
