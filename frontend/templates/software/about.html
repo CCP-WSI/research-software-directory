@@ -1,7 +1,7 @@
 <section class="" id="about">
     <div class="container">
         <div class="row">
-		<div class="col-3-4">
+		<div class="metadata col-3-4">
 			<h2 class="subtitle text-blue">Scientific Metadata for {{template_data.brandName}}</h2>
 			<div class="row">
 			   <div class="specifications col-1-4">
@@ -70,8 +70,8 @@
 			</div>
 		</div>
 
-            <div class="specifications col-1-4">
-                <h2 class="subtitle text-blue">Administrative Metadata for {{template_data.brandName}}</h2>
+            <div class="metadata specifications col-1-4">
+                <h2 class="subtitle text-blue">Administrative Metadata</h2>
                 <h5><svg class="icon"><use xlink:href="{{url_for('static', filename='icons/icons.svg')}}#icon-key"></use></svg>Code Access</h5>
                 {% if template_data.codeAccess %}
                 <ul class="tags">
@@ -80,11 +80,12 @@
                 {% endif%}
 
 
-                <h5><svg class="icon"><use xlink:href="{{url_for('static', filename='icons/icons.svg')}}#icon-equation"></use></svg>User guide/Manual</h5>
-                <ul class="languages">
-                    {% for language in template_data.programmingLanguage %}
-                        <li>{{language}}</li>
-                    {% endfor %}
+                <h5>
+		    <svg class="icon"><use xlink:href="{{url_for('static', filename='icons/icons.svg')}}#icon-paperclip"></use></svg>
+                    <a href="{{template_data.userGuide}}" target="_blank">User guide/Manual</a>
+                </h5>
+                <ul>
+                    <li><a href="{{template_data.userGuide}}" target="_blank">{{template_data.userGuide}}</a></li>
                 </ul>
 
                 <h5><svg class="icon"><use xlink:href="{{url_for('static', filename='icons/icons.svg')}}#icon-paperclip"></use></svg>License</h5>

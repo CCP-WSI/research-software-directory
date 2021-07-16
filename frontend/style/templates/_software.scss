@@ -258,6 +258,14 @@ section{
         max-width: 860px;
     }
 }
+.metadata{
+    .subtitle{
+        padding-bottom: 0.3em;
+        @include bp(max, $phablet){
+            padding-bottom: 1em;
+        }
+    }
+}
 .statement{
     .subtitle{
         padding-bottom: 0.3em;
