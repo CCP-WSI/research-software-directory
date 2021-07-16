@@ -103,13 +103,17 @@
         "primaryKey": {
             "$ref": "definitions.json/key/software"
         },
-        "codeAccess": {
-            "enum": [
-                "Open-source",
-                "Commercial",
-                "In-house"
-            ],
-            "type": "string"
+        "tags": {
+            "items": {
+                "enum": [
+                    "Open-source",
+                    "Commerical",
+                    "In-house"
+                ],
+                "type": "string"
+            },
+            "type": "array",
+            "uniqueItems": true
         },
         "related": {
             "additionalProperties": false,

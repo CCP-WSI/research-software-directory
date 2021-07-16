@@ -114,18 +114,9 @@ function initOverview(softwareData, organizationsData) {
         },
         data: {
             tags: [
-                "Big data",
-                "GPU",
-                "High performance computing",
-                "Image processing",
-                "Inter-operability & linked data",
-                "Machine learning",
-                "Multi-scale & multi model simulations",
-                "Optimized data handling",
-                "Real time data analysis",
-                "Text analysis & natural language processing",
-                "Visualization",
-                "Workflow technologies"
+                "Open-source",
+                "Commercial",
+                "In-house"
             ],
             sorters: ['Last updated', 'Most updates', 'Most mentions'],
             filter: {

@@ -95,7 +95,7 @@
           "sortIndex": 1010,
           "readonly": true
         },
-        "codeAccess": {
+        "tags": {
           "sortIndex": 520,
           "label": "Code Access"
         },
