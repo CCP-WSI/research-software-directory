@@ -5,24 +5,7 @@
                 {% if template_data.brandName %}
                 <h1 class="title name">{{template_data.brandName}}</h1>
                 {% endif %}
-            </div>
-
-           <div class="col col-1-4">
-                <div class="highlight-data">
-                    {% if template_data.related.mentions %}
-                        <div class="data">
-                            <div class="num">{{ template_data.related.mentions | length }}</div>
-                            <div class="text">{{ 'mentions' if template_data.related.mentions | length >1 else 'mention' }}</div>
-                        </div>
-                    {% endif %}
-                    <div class="data">
-                        <div class="num">{{ template_data.contributors | length }}</div>
-                        <div class="text">{{ 'contributors' if template_data.contributors | length >1 else 'contributor' }}</div>
-                    </div>
-                </div>
-            </div>
-
-
+		<div class="row">
             <div class="specifications col-1-4">
                 <h5><svg class="icon"><use xlink:href="{{url_for('static', filename='icons/icons.svg')}}#icon-tag"></use></svg>Code Base</h5>
                 {% if template_data.codeBase %}
@@ -45,6 +28,25 @@
                         <li>{{template_data.parentCodeBase}}</li>
                 </ul>
             </div>
+
+		</div>
+            </div>
+
+           <div class="col col-1-4">
+                <div class="highlight-data">
+                    {% if template_data.related.mentions %}
+                        <div class="data">
+                            <div class="num">{{ template_data.related.mentions | length }}</div>
+                            <div class="text">{{ 'mentions' if template_data.related.mentions | length >1 else 'mention' }}</div>
+                        </div>
+                    {% endif %}
+                    <div class="data">
+                        <div class="num">{{ template_data.contributors | length }}</div>
+                        <div class="text">{{ 'contributors' if template_data.contributors | length >1 else 'contributor' }}</div>
+                    </div>
+                </div>
+            </div>
+
 
         </div>
     </div>
