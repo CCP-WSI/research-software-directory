@@ -8,23 +8,27 @@
             "type": "string"
         },
         "codeBase": {
-            "maxLength": 50,
-            "minLength": 1,
+            "enum": [
+                "N/A",
+                "OpenFOAM - Foundation",
+                "OpenFOAM - ESI",
+                "waves2Foam"
+            ],
             "type": "string"
         },
         "parentSolver": {
-            "maxLength": 50,
-            "minLength": 1,
             "type": "string"
         },
         "parentCodeBase": {
-            "maxLength": 50,
-            "minLength": 1,
+            "enum": [
+                "N/A",
+                "OpenFOAM - Foundation",
+                "OpenFOAM - ESI",
+                "waves2Foam"
+            ],
             "type": "string"
         },
         "distributedBy": {
-            "maxLength": 50,
-            "minLength": 1,
             "type": "string"
         },
         "conceptDOI": {
@@ -101,7 +105,6 @@
                 ],
                 "type": "string"
             },
-            "minItems": 1,
             "type": "array",
             "uniqueItems": true
         },
@@ -110,7 +113,6 @@
         },
         "shortStatement": {
             "maxLength": 300,
-            "minLength": 10,
             "pattern": "^[a-zA-Z0-9,.;:\\-_ '’+]+$",
             "type": "string"
         },
