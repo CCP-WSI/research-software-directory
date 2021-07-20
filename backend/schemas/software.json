@@ -120,7 +120,7 @@
             "items": {
                 "enum": [
                     "Open-source",
-                    "Commerical",
+                    "Commercial",
                     "In-house"
                 ],
                 "type": "string"
