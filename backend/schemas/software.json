@@ -257,26 +257,38 @@
             "additionalProperties": false,
             "properties": {
                 "FluidDensityDefinition": {
-                    "enum": [
-                        "Compressible",
-                        "Incompressible"
-                    ],
+                    "items": {
+                        "enum": [
+                            "Compressible",
+                            "Incompressible"
+                        ],
                     "type": "string"
+                    },
+                    "type": "array",
+                    "uniqueItems": true
                 },
                 "NumberofFluidPhases": {
-                    "enum": [
-                        "1",
-                        "2",
-                        "3"
-                    ],
+                    "items": {
+                        "enum": [
+                            "1",
+                            "2",
+                            "3"
+                        ],
                     "type": "string"
+                    },
+                    "type": "array",
+                    "uniqueItems": true
                 },
                 "FreeSurfaceTreatment": {
-                    "enum": [
-                        "Volume of Fluid (VOF)",
-                        "Another option TBD"
-                    ],
-                    "type": "string"
+                    "items": {
+                        "enum": [
+                            "Volume of Fluid (VOF)",
+                            "Another option TBD"
+                        ],
+                        "type": "string"
+                        },
+                    "type": "array",
+                    "uniqueItems": true
                 },
                 "PressureVelocityCoupling": {
                     "items": {

@@ -44,18 +44,26 @@
 				<div class="read-more">
 				    <div class="read-more_content" style="height:0;">
 					<h5><svg class="icon"><use xlink:href="{{url_for('static', filename='icons/icons.svg')}}#icon-pencil"></use></svg>Fluid density definition</h5>
-					<ul class="tags">
-					    <li>{{template_data.fluidSolvers.FluidDensityDefinition}}</li>
-					</ul>
+                                        <ul class="tags">
+                                            {% for fluid in template_data.fluidSolvers.FluidDensityDefinition %}
+                                                <li>{{fluid}}</li>
+                                            {% endfor %}
+                                        </ul>
 
                                         <h5><svg class="icon"><use xlink:href="{{url_for('static', filename='icons/icons.svg')}}#icon-pencil"></use></svg>Number of Fluid Phases</h5>
                                         <ul class="tags">
-                                            <li>{{template_data.fluidSolvers.NumberofFluidPhases}}</li>
+                                            {% for phases in template_data.fluidSolvers.NumberofFluidPhases %}
+                                                <li>{{phases}}</li>
+                                            {% endfor %}
+
                                         </ul>
 
-                                        <h5><svg class="icon"><use xlink:href="{{url_for('static', filename='icons/icons.svg')}}#icon-pencil"></use></svg>Free-surfaceTreatment</h5>
+                                        <h5><svg class="icon"><use xlink:href="{{url_for('static', filename='icons/icons.svg')}}#icon-pencil"></use></svg>Free-surface Treatment</h5>
                                         <ul class="tags">
-                                            <li>{{template_data.fluidSolvers.FreeSurfaceTreatment}}</li>
+                                            {% for treat in template_data.fluidSolvers.FreeSurfaceTreatment %}
+                                                <li>{{treat}}</li>
+                                            {% endfor %}
+
                                         </ul>
 
 					<h5><svg class="icon"><use xlink:href="{{url_for('static', filename='icons/icons.svg')}}#icon-pencil"></use></svg>Pressure-velocity coupling</h5>
