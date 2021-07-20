@@ -12,29 +12,40 @@
           "label": "Solver name",
           "sortIndex": 2
         },
+        "shortStatement": {
+          "label": "Short statement",
+          "multiline": true,
+          "sortIndex": 3,
+          "help":
+            "<p>Describe your solver in max 30 words</p>"
+        },
         "codeBase": {
           "label": "Code Base",
-          "sortIndex": 3,
+          "sortIndex": 4,
 	  "help": 
-            "<p>For example, OpenFOAM</p>"
+            "<p>Typically solvers come as part of a larger code base or a set of libraries.</p>"
         },
         "parentSolver": {
           "label": "Parent Solver",
-          "sortIndex": 4,
+          "sortIndex": 5,
           "help":
             "<p>Quite often solvers are modified versions of another solver (the parent solver)</p>"
         },
         "parentCodeBase": {
           "label": "Parent Code Base",
-          "sortIndex": 5
+          "sortIndex": 6
         },
         "getStartedURL": {
           "label": "URL of solver ",
-          "sortIndex": 6
+          "sortIndex": 7
         },
         "userGuide": {
           "label": "User Guide/Manual",
-          "sortIndex": 7
+          "sortIndex": 8
+        },
+        "distributedBy": {
+          "label": "Distributed by",
+          "sortIndex": 9
         },
         "GoverningEquations": {
           "sortIndex": 100,
@@ -492,6 +503,42 @@
           "label": "Organization URL",
           "readonly": false,
           "sortIndex": 300
+        }
+      }
+    },
+    "codeBase": {
+      "name": "Code Base",
+      "label": "Code Base",
+      "itemLabelTemplate": "{{ brandName }}",
+      "icon": "university",
+      "properties": {
+         "brandName": {
+          "label": "Name of Code Base",
+          "sortIndex": 2
+        },
+        "createdAt": {
+          "label": "Created at",
+          "sortIndex": 1000,
+          "readonly": true
+        },
+        "createdBy": {
+          "label": "Created by",
+          "sortIndex": 1010,
+          "readonly": true
+        },
+        "primaryKey": {
+          "sortIndex": 0,
+          "readonly": true
+        },
+        "updatedAt": {
+          "label": "Updated at",
+          "sortIndex": 1020,
+          "readonly": true
+        },
+        "updatedBy": {
+          "label": "Updated by",
+          "sortIndex": 1030,
+          "readonly": true
         }
       }
     }

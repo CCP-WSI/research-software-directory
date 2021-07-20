@@ -48,6 +48,16 @@
 					    <li>{{template_data.fluidSolvers.FluidDensityDefinition}}</li>
 					</ul>
 
+                                        <h5><svg class="icon"><use xlink:href="{{url_for('static', filename='icons/icons.svg')}}#icon-pencil"></use></svg>Number of Fluid Phases</h5>
+                                        <ul class="tags">
+                                            <li>{{template_data.fluidSolvers.NumberofFluidPhases}}</li>
+                                        </ul>
+
+                                        <h5><svg class="icon"><use xlink:href="{{url_for('static', filename='icons/icons.svg')}}#icon-pencil"></use></svg>Free-surfaceTreatment</h5>
+                                        <ul class="tags">
+                                            <li>{{template_data.fluidSolvers.FreeSurfaceTreatment}}</li>
+                                        </ul>
+
 					<h5><svg class="icon"><use xlink:href="{{url_for('static', filename='icons/icons.svg')}}#icon-pencil"></use></svg>Pressure-velocity coupling</h5>
 					{% if template_data.fluidSolvers.PressureVelocityCoupling %}
 					<ul class="tags">

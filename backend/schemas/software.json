@@ -22,6 +22,11 @@
             "minLength": 1,
             "type": "string"
         },
+        "distributedBy": {
+            "maxLength": 50,
+            "minLength": 1,
+            "type": "string"
+        },
         "conceptDOI": {
             "pattern": "^10\\.\\d{4,9}\/[\\-._;()/:a-zA-Z0-9]+$",
             "type": "string"
@@ -102,6 +107,12 @@
         },
         "primaryKey": {
             "$ref": "definitions.json/key/software"
+        },
+        "shortStatement": {
+            "maxLength": 300,
+            "minLength": 10,
+            "pattern": "^[a-zA-Z0-9,.;:\\-_ '’+]+$",
+            "type": "string"
         },
         "tags": {
             "items": {
@@ -250,6 +261,21 @@
                     ],
                     "type": "string"
                 },
+                "NumberofFluidPhases": {
+                    "enum": [
+                        "1",
+                        "2",
+                        "3"
+                    ],
+                    "type": "string"
+                },
+                "FreeSurfaceTreatment": {
+                    "enum": [
+                        "Volume of Fluid (VOF)",
+                        "Another option TBD"
+                    ],
+                    "type": "string"
+                },
                 "PressureVelocityCoupling": {
                     "items": {
                         "enum": [
@@ -261,13 +287,6 @@
                     },
                     "type": "array",
                     "uniqueItems": true
-                },
-                "FluidDensityDefinition": {
-                    "enum": [
-                        "Compressible",
-                        "Incompressible"
-                    ],
-                    "type": "string"
                 }
             },
             "type": "object"
@@ -275,15 +294,10 @@
     },
     "required": [
         "brandName",
-        "conceptDOI",
+        "isPublished",
         "contributors",
         "createdAt",
-        "getStartedURL",
-        "repositoryURLs",
-        "isPublished",
-        "license",
         "primaryKey",
-        "related",
         "slug",
         "updatedAt"
     ],
