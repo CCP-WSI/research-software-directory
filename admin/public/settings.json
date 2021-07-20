@@ -505,42 +505,6 @@
           "sortIndex": 300
         }
       }
-    },
-    "codeBase": {
-      "name": "Code Base",
-      "label": "Code Base",
-      "itemLabelTemplate": "{{ brandName }}",
-      "icon": "university",
-      "properties": {
-         "brandName": {
-          "label": "Name of Code Base",
-          "sortIndex": 2
-        },
-        "createdAt": {
-          "label": "Created at",
-          "sortIndex": 1000,
-          "readonly": true
-        },
-        "createdBy": {
-          "label": "Created by",
-          "sortIndex": 1010,
-          "readonly": true
-        },
-        "primaryKey": {
-          "sortIndex": 0,
-          "readonly": true
-        },
-        "updatedAt": {
-          "label": "Updated at",
-          "sortIndex": 1020,
-          "readonly": true
-        },
-        "updatedBy": {
-          "label": "Updated by",
-          "sortIndex": 1030,
-          "readonly": true
-        }
-      }
     }
   }
 }
