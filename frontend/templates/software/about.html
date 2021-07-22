@@ -40,7 +40,7 @@
 
 			   <div class="specifications col-1-4">
 
-				{% if template_data.fluidSolvers %}
+				{% if template_data.fluidSolvers[0] %}
 				<div class="read-more">
 				    <div class="read-more_content" style="height:0;">
 					<h5><svg class="icon"><use xlink:href="{{url_for('static', filename='icons/icons.svg')}}#icon-pencil"></use></svg>Fluid density definition</h5>
